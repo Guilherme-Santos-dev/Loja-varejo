@@ -11,7 +11,11 @@ class Redirect
     ) {
         session_start();
         if(is_array($message)){
-            // TODO implementar o tratamento de coleções
+            $html = '';
+            foreach($message as $msg){
+                $html .= "<li>$msg</li>";
+            }
+            $_SESSION['msg_warning'] = $html;
         } else {
             if($type == 'successe'){
                 $_SESSION['img_success'] = $message;
@@ -19,5 +23,6 @@ class Redirect
                 $_SESSION['msg_error'] = $message;
             }
         }
+        header("location:$url");
     }
 }

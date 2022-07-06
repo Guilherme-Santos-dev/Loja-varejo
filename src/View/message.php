@@ -55,6 +55,6 @@
         unset($_SESSION['msg_warning'])
         ?>
     </main>
-</body>
+</body>         
 
 </html>

@@ -17,8 +17,8 @@ class Redirect
             }
             $_SESSION['msg_warning'] = $html;
         } else {
-            if($type == 'successe'){
-                $_SESSION['img_success'] = $message;
+            if($type == 'success'){
+                $_SESSION['msg_success'] = $message;
             }else{
                 $_SESSION['msg_error'] = $message;
             }
